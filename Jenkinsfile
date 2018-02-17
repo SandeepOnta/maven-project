@@ -31,8 +31,7 @@ pipeline {
 		stage('deploy to tomcat from ansible playbook'){
                 steps {
                     sh 'ansiblePlaybook credentialsId: '5baac9f7-ec69-4048-bd4f-5c9ad7ca8ca0', inventory: '/etc/ansible/hosts', playbook: 'deploy-tomcat-ansible.yml', sudoUser: null'
-					echo 'deploying war file'
-                }
+				}
         }
     }
 }
