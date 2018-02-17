@@ -30,7 +30,7 @@ pipeline {
         }
 		stage('deploy to tomcat from ansible playbook'){
                 steps {
-                    sh 'ansible-playbook /opt/deploy-tomcat-ansible.yml'
+                    sh 'ansible-playbook /opt/deploy-tomcat-ansible.yml -i /etc/ansible/hosts --ask-pass --sudo -vvvv'
 					echo 'deploying war file'
                 }
         }
