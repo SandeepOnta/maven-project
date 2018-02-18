@@ -1,5 +1,5 @@
 pipeline {
-    agent {label "master"}
+    agent {label "unix"}
     parameters {
 	choice(choices: 'build\ndev\nqa',name:'Stage')  
 	}
