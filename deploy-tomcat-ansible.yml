@@ -4,9 +4,9 @@
   tasks:
     - name: Download .war
       get_url:
-        url: http://192.168.0.177:8090/artifactory/libs-release-local/com/mkyong/CounterWebApp/webapp-1.0.war
-        dest: /opt/tomcat/webapps/deploy-tomcat-ansible.war
+        url: http://192.168.0.31:8081/artifactory/libs-release-local/com/mkyong/CounterWebApp/webapp-1.0.war
+        dest: /apache-tomcat-8.5.24/webapps/deploy-tomcat-ansible.war
     - name: stop tomcat
-      shell: /opt/tomcat/bin/shutdown.sh
+      shell: /apache-tomcat-8.5.24/bin/shutdown.sh
     - name: start tomcat
-      shell: /opt/tomcat/bin/startup.sh
+      shell: /apache-tomcat-8.5.24/bin/startup.sh
