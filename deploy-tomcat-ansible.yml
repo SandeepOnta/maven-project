@@ -15,4 +15,8 @@
     - name: start tomcat
       shell: /apache-tomcat-8.5.24/bin/startup.sh
       register: startTomcat
-    - debug: var=startTomcat.stdout_lines    
+    - debug: var=startTomcat.stdout_lines
+    - name: start tomcat
+      shell: /apache-tomcat-8.5.24/bin/startup.sh
+      register: startTomcat
+    - debug: var=startTomcat.stdout_lines   
