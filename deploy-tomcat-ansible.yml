@@ -9,8 +9,8 @@
     - name: stop tomcat
       shell: /apache-tomcat-8.5.24/bin/shutdown.sh
     - debug: 
-        var= output_line 
+        var: output_line 
     - name: start tomcat
       shell: /apache-tomcat-8.5.24/bin/startup.sh
     - debug: 
-        var= output_line    
+        var: output_line    
