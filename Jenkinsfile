@@ -32,7 +32,7 @@ pipeline {
                 steps {
 						ansiblePlaybook credentialsId: '99233ea5-4303-4b34-b07f-d4c10b55ce6b', inventory: '/etc/ansible/hosts', playbook: 'deploy-tomcat-ansible.yml', sudoUser: null
 
-				}
+				} 
         }
     }
 }
